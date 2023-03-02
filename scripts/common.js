@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     onYouTubeIframeAPIReady()
   }, 500)
    document.querySelector('.js-play-video').addEventListener('click', () => {
-     console.log(184848);
      document.querySelector('.js-play-video').classList.add('hide')
      window.player.playVideo()
    })

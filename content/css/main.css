@@ -298,7 +298,7 @@ template {
 
 @media (max-width: 480px) {
     .main-block__container {
-        background-image: url(../images/pics/rectangle-mob.svg) !important
+        background-image: url(/content/images/pics/rectangle-mob.svg) !important
     }
 }
 
@@ -449,12 +449,14 @@ template {
     }
 }
 
-.main-block__img, .main-block__img img {
+.main-block__img {
     width: 100%;
     height: 100%
 }
 
-.main-block__img img {
+.main-block__img img, .main-block__img picture {
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover
 }
@@ -843,17 +845,19 @@ template {
     }
 }
 
-.meesenger-item:not(.meesenger-item--uniq):hover {
-    outline-color: #684eed
+@media (min-width: 1025px) {
+    .meesenger-item:not(.meesenger-item--uniq):hover {
+        outline-color: #684eed
+    }
+
+    .meesenger-item:not(.meesenger-item--uniq):hover .meesenger-item__text {
+        top: calc(100% + 1rem);
+        opacity: 1;
+        visibility: visible
+    }
 }
 
-.meesenger-item:not(.meesenger-item--uniq):hover .meesenger-item__text {
-    top: calc(100% + 1rem);
-    opacity: 1;
-    visibility: visible
-}
-
-@media (min-width: 1600px) {
+@media (min-width: 1025px) and (min-width: 1600px) {
     .meesenger-item:not(.meesenger-item--uniq):hover .meesenger-item__text {
         top: calc(100% + .83333vw)
     }
@@ -1124,7 +1128,7 @@ template {
 }
 
 .st-btn:first-child:after {
-    background-image: url(../images/icons/facebook.svg) !important
+    background-image: url(/content/images/icons/facebook.svg) !important
 }
 
 .st-btn:first-child:after, .st-btn:nth-child(2):after {
@@ -1142,11 +1146,11 @@ template {
 }
 
 .st-btn:nth-child(2):after {
-    background-image: url(../images/icons/twitter.svg) !important
+    background-image: url(/content/images/icons/twitter.svg) !important
 }
 
 .st-btn:nth-child(3):after {
-    background-image: url(../images/icons/union.svg) !important
+    background-image: url(/content/images/icons/union.svg) !important
 }
 
 .st-btn:nth-child(3):after, .st-btn:nth-child(4):after {
@@ -1164,7 +1168,7 @@ template {
 }
 
 .st-btn:nth-child(4):after {
-    background-image: url(../images/icons/what2.svg) !important
+    background-image: url(/content/images/icons/what2.svg) !important
 }
 
 .st-btn:hover {
